@@ -3,13 +3,15 @@ const cors = require("cors");
 
 const sequelize = require("./utils/database");
 const signupRoutes = require("./routes/signup");
+const loginRoutes = require("./routes/login");
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
-app.use("/user", signupRoutes);
+app.use("/user/signup", signupRoutes);
+app.use("/user/login", loginRoutes);
 
 sequelize
   .sync()
