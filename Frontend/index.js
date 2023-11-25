@@ -2,6 +2,7 @@ const nameEl = document.getElementById("username");
 const gmailEl = document.getElementById("gmail");
 const passwordEl = document.getElementById("password");
 const msgEl = document.getElementById("msg");
+const msgParaEl = document.getElementById("msg-para");
 
 const signupButton = document.getElementById("signup-btn");
 
@@ -17,13 +18,20 @@ signupButton.addEventListener("click", async (e) => {
       password: passwordEl.value,
     };
 
-    const result = await axios.post("http://localhost:4000/user/signup", obj);
-    console.log(result);
+    try {
+      const result = await axios.post("http://localhost:4000/user/signup", obj);
+      // console.log(result);
+    } catch (err) {
+      msgParaEl.textContent = "Already having account with given gmail.";
+      msgEl.style.display = "block";
+      // console.log(err);
+    }
 
     nameEl.value = "";
     gmailEl.value = "";
     passwordEl.value = "";
   } else {
+    msgParaEl.textContent = "Please enter all fields";
     msgEl.style.display = "block";
   }
 });
