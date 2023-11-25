@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="login-container">
+
+            <div class="msg-container">
+                <p id="msg-para">User does not exist.</p>
+            </div>
+
+            <div class="gmail-input">
+                <label for="gmail">Gmail</label> <br>
+                <input type="text" id="gmail" name="gmail" placeholder="Gmail">
+            </div>
+
+            <div class="password-input">
+                <label for="password">Password</label> <br>
+                <input type="text" id="password" name="password" placeholder="password">
+            </div>
+
+            <div class="login-btn-container">
+                <button id="login-btn">Login</button>
+            </div>
+
+            <div class="signup-link">
+                <p>New user click here to <a href="./index.html">signup</a></p>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
