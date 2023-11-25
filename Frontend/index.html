@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="signup-container">
+
+            <div class="msg" id="msg">
+                <p>Please enter all fields</p>
+            </div>
+
+            <div class="name-input">
+                <label for="username">Name</label> <br>
+                <input type="text" id="username" name="username" placeholder="name">
+            </div>
+
+            <div class="gmail-input">
+                <label for="gmail">Gmail</label> <br>
+                <input type="text" id="gmail" name="gmail" placeholder="gmail">
+            </div>
+
+            <div class="password-input">
+                <label for="password">Password</label> <br>
+                <input type="password" id="password" name="password" placeholder="password">
+            </div>
+
+            <div class="signup-btn-container">
+                <button id="signup-btn">Signup</button>
+            </div>
+
+
+            <div class="login-link">
+                <p>Already have an account. Click here to <a href="#">Login</a></p>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
