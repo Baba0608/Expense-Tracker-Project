@@ -16,19 +16,16 @@ loginBtn.addEventListener("click", async (e) => {
     };
     try {
       const result = await axios.post("http://localhost:4000/user/login", obj);
-      //   console.log(result);
+      console.log(result);
 
-      if (result.data.result.password != obj.password) {
-        msgPara.textContent = "Password is incorrect.";
-        msgContainer.style.display = "block";
-      } else {
+      if (result.data.success) {
         gmailEl.value = "";
         passwordEl.value = "";
       }
     } catch (err) {
-      msgPara.textContent = "User does not exist.";
+      msgPara.textContent = err.message;
       msgContainer.style.display = "block";
-      //   console.log(err);
+      // console.log(err.message);
     }
   } else {
     msgPara.textContent = "Please enter all fields.";
