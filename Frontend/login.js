@@ -21,6 +21,9 @@ loginBtn.addEventListener("click", async (e) => {
       if (result.data.success) {
         gmailEl.value = "";
         passwordEl.value = "";
+
+        localStorage.setItem("token", result.data.token);
+        window.location.assign("./expense.html");
       }
     } catch (err) {
       msgPara.textContent = err.message;

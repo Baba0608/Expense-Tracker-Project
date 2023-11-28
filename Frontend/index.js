@@ -21,15 +21,17 @@ signupButton.addEventListener("click", async (e) => {
     try {
       const result = await axios.post("http://localhost:4000/user/signup", obj);
       // console.log(result);
+
+      nameEl.value = "";
+      gmailEl.value = "";
+      passwordEl.value = "";
+
+      window.location.assign("./login.html");
     } catch (err) {
       msgParaEl.textContent = "Already having account with given gmail.";
       msgEl.style.display = "block";
       // console.log(err);
     }
-
-    nameEl.value = "";
-    gmailEl.value = "";
-    passwordEl.value = "";
   } else {
     msgParaEl.textContent = "Please enter all fields";
     msgEl.style.display = "block";

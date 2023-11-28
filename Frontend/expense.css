@@ -1,0 +1,77 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: lightpink;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.container{
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.expense-input-container , .expense-list-container{
+    background-color: lightgreen;
+    margin: 10px;
+    padding: 20px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+input , select{
+    margin-bottom: 10px;
+    font-size: 18px;
+    padding: 2px 3px;
+    width: 100%;
+}
+
+label{
+    font-size: 22px;
+}
+
+.add-expense-button-container{
+    display: flex;
+    justify-content: center;
+}
+
+.add-expense-button-container button{
+    font-size: 20px;
+    padding: 5px 15px;
+}
+
+.expense-list-item{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background-color: rgb(73, 183, 219);
+    padding: 10px 5px;
+    border-radius: 10px;
+}
+
+.item-description{
+    width: 70%;
+}
+
+.item-delete{
+    width: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#expense-delete{
+    font-size: 18px;
+    padding: 3px 5px;
+}
+
+.title{
+    padding-bottom: 10px;
+}
