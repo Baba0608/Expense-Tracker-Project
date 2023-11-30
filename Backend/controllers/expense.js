@@ -1,4 +1,4 @@
-const Expense = require("../models/expense");
+const Expense = require("../models/expenses");
 
 const postExpense = async (req, res, next) => {
   const { item, category, amount } = req.body;
